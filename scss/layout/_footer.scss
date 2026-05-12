@@ -10,103 +10,82 @@
     align-items: center;
 
     .footer-content {
-        @include tablet {
-            display: flex !important;
-            flex-direction: row !important;
-            justify-content:space-between !important;
-            align-items:flex-start !important;
-            width:100% !important;
-            max-width:1200px;
-            margin: 0 auto 60px;
-            padding : 0 40px;
-            gap:20px;
-        }
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        width:100%;
     }
-.footer-logo {
-    align-self:center;
-    margin-bottom:40px;
-    img { width:140px;}
 
-    @include tablet {
-        align-self:flex-start !important;
-        margin:0 !important;
+    .footer-logo, .footer-nav, .footer-contact, .footer-hours, .footer-socials{
+        margin-bottom:60px;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        width:fit-content;
+        text-align:left;
     }
-}
 
-.footer nav, .footer-contact, .footer-hours, .footer-socials {
-     @include tablet {
-        width:auto !important;
-        margin:0 !important;
-        text-align:left !important;
-    }
-}
+    .footer-nav ul {
+        list-style:none;
+        padding:0;
+        margin:0;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
 
-    .footer-nav {
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            li {
-                line-height: 1.2;
-                font-family: $font-family;
-                font-weight: 300;
-                &.active { color: $yellow; }
+        li {
+            line-height:1.2;
+            white-space:nowrap;
+            &.active {
+                color:$yellow;
             }
         }
     }
 
     .footer-contact {
-        font-family: $font-family;
-        font-weight: 300;
-        p:first-of-type {margin-top:15px; margin-bottom:30px;}
-        p {margin: 0; line-height:1.1;}
-
-        @include tablet {
-            p:first-of-type {margin-top:0;}
+        p:first-of-type {
+            margin-bottom:30px;
         }
+            p {
+                line-height:1.2;
+                white-space:nowrap;
+            }
     }
 
     .footer-hours {
         h3 {
-            font-family: $font-family;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            font-weight: 400;
+            margin-bottom:15px;
+            font-weight:400;
+            text-transform:uppercase;
         }
-        p { margin-bottom: 0; line-height: 1.2; }
+        p {
+            line-height:1.2;
+            white-space:nowrap;
+        }
     }
 
-    .footer-socials {
-        align-self: center;
-        text-align: center;
-
-        @include tablet {
-            align-self:flex-start;
-            text-align:left;
+    .footer-socials{
+    align-items:center;
+        h3 {
+            margin-bottom:15px;
         }
-
-        h3 { font-family: $font-family; margin-bottom: 15px; olor:$white;}
-       
         .icons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            @include tablet {justify-content:flex-start;}
-            a i {font-size:1.8rem; color:$white; }
-        }   
+            display:flex;
+            gap:15px;
+            a i {color:$white !important; font-size:1.8rem;}
+        }
     }
 
     .mentions {
         width: 100%;
         border:1px solid $yellow;
-        padding: 20px 0;
-        margin-top:20px;
+        padding: 25px 0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
         
-        @include tablet {
-            display:flex;
-            justify-content:center;
-            gap:100px;
+        p:first-of-type {
+            margin-bottom:15px;
         }
-        p { margin: 0; font-size:0.8rem; font-family:$font-family;}
     }
 }
