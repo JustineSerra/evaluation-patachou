@@ -5,13 +5,32 @@ header {
     padding:20px 0; /*espace avec le haut de la page*/
     text-align:center; /*aligne tous les textes du header*/
 
+    @include tablet {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding: 20px 5px;
+        max-width:720px;
+        margin:0 auto;
+    }
+
+    @include desktop {
+        max-width:1140px;
+        padding:20px 60px;
+    }
+
     img {
         width:120px;
         margin-bottom:15px;
+        
+        @include tablet {
+            margin-bottom:0;
+            width:150px;
+        }
     }
 }
-
-    nav {
+ 
+nav {
         ul {
         display:flex;
         flex-direction:column;
@@ -19,13 +38,23 @@ header {
         padding:0;
         list-style:none;
 
-            li {
-                &:first-child a {
-                    color:$yellow;
+        @include tablet {
+            flex-direction:row;
+            justify-content:center;
+            gap:20px;
+        }
+
+        @include desktop {
+            gap:40px;
+        }
+        
+        li {
+            &:first-child a {
+                color:$yellow;
                 }
             }
 
-            a {
+        a {
             text-decoration:none;
             color:$black;
             font-weight:bold;

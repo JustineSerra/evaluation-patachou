@@ -1,0 +1,39 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.localisation {
+    background-color:$yellow;
+    padding:60px 0 0 0;
+    text-align:center;
+    display:flex; /*pour l'alignement*/
+    flex-direction:column; /*vertical du coup*/
+    align-items:center;
+
+    h1 {
+        font-family:$font-main;
+        color:$white;
+        font-size:2.2rem;
+        font-weight:500;
+        margin-bottom:30px; /*espace entre le titre et l'adresse*/
+        max-width:350px;
+        padding:0 20px;
+    }
+
+    p {
+        font-family:$font-family;
+        color:$white;
+        font-size:1rem; /*taille de l'adresse*/
+        line-height:1.6;
+        font-weight:300;
+        letter-spacing:1px;
+        max-width:250px;
+        margin-bottom:40px;
+    }
+
+    iframe {
+        width:100%; /*la map prend toute la largeur*/
+        height:300px; /*réduit la taille de la map*/
+        display:block;
+        border:none; /*enlève la bordure par défaut*/
+    }
+}

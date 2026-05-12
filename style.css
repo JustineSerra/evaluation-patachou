@@ -15,9 +15,31 @@ header {
   padding: 20px 0; /*espace avec le haut de la page*/
   text-align: center; /*aligne tous les textes du header*/
 }
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    max-width: 1140px;
+    padding: 20px 60px;
+  }
+}
 header img {
   width: 120px;
   margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  header img {
+    margin-bottom: 0;
+    width: 150px;
+  }
 }
 
 nav ul {
@@ -26,6 +48,18 @@ nav ul {
   gap: 10px;
   padding: 0;
   list-style: none;
+}
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  nav ul {
+    gap: 40px;
+  }
 }
 nav ul li:first-child a {
   color: #AB864C;
@@ -36,6 +70,110 @@ nav ul a {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.9rem;
+}
+
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 60px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  margin-bottom: 50px;
+}
+.footer .footer-logo {
+  align-self: center;
+  margin-bottom: 40px;
+}
+.footer .footer-logo img {
+  width: 140px;
+}
+.footer .footer-nav {
+  margin-bottom: 30px;
+}
+.footer .footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer .footer-nav ul li {
+  margin-bottom: 0;
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.footer .footer-nav ul li.active {
+  color: #AB864C;
+}
+.footer .footer-contact {
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  /*réduction de l'espace entre contact et le numéro*/
+}
+.footer .footer-contact p:first-of-type {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.footer .footer-contact p:last-of-type {
+  line-height: 1.1;
+  margin: 0;
+}
+.footer .footer-hours {
+  margin-bottom: 30px;
+}
+.footer .footer-hours h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.footer .footer-hours p {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+.footer .footer-socials {
+  align-self: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.footer .footer-socials h3 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.footer .footer-socials .icons {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+.footer .footer-socials .icons a {
+  text-decoration: none;
+}
+.footer .footer-socials .icons a i {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+.footer .mentions {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #AB864C;
+  margin-bottom: 2px;
+  padding: 30px 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+}
+.footer .mentions p {
+  margin: 0;
+  line-height: 1.8;
 }
 
 .evenement {
@@ -193,6 +331,40 @@ nav ul a {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   align-self: flex-start;
+}
+
+.localisation {
+  background-color: #AB864C;
+  padding: 60px 0 0 0;
+  text-align: center;
+  display: flex; /*pour l'alignement*/
+  flex-direction: column; /*vertical du coup*/
+  align-items: center;
+}
+.localisation h1 {
+  font-family: "Kaisei Decol", serif;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 30px; /*espace entre le titre et l'adresse*/
+  max-width: 350px;
+  padding: 0 20px;
+}
+.localisation p {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 1rem; /*taille de l'adresse*/
+  line-height: 1.6;
+  font-weight: 300;
+  letter-spacing: 1px;
+  max-width: 250px;
+  margin-bottom: 40px;
+}
+.localisation iframe {
+  width: 100%; /*la map prend toute la largeur*/
+  height: 300px; /*réduit la taille de la map*/
+  display: block;
+  border: none; /*enlève la bordure par défaut*/
 }
 
 .presentation {
