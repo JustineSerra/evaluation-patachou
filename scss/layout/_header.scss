@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+header {
+    padding:20px 0; /*espace avec le haut de la page*/
+    text-align:center; /*aligne tous les textes du header*/
+
+    img {
+        width:120px;
+        margin-bottom:15px;
+    }
+}
+
+    nav {
+        ul {
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        padding:0;
+        list-style:none;
+
+            li {
+                &:first-child a {
+                    color:$yellow;
+                }
+            }
+
+            a {
+            text-decoration:none;
+            color:$black;
+            font-weight:bold;
+            text-transform:uppercase;
+            font-size:0.9rem;
+            }
+        }
+    }

@@ -1,0 +1,104 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.evenement {
+    padding: 40px 20px;
+    display:flex;
+    flex-direction:column; /*aligne verticalement*/
+    align-items:center;
+    text-align:center;
+
+    .separator {
+        width:80%;
+        height:1px; /*epaisseur de la ligne*/
+        background-color:$black;
+        margin-bottom:40px; /*espace sous la ligne avant le titre*/
+    }
+
+    h1 {
+        font-family:$font-main;
+        font-size:1.8rem;
+        font-weight:900; /*titre en gras*/
+        margin-bottom:20px;
+        max-width: 300px; 
+    }
+    
+    p {
+        font-family:$font-family;
+        font-size:0.9rem;
+        line-height:1.4;
+        margin-bottom:40px;
+        max-width:350px;
+        text-align:left; /*aligne le paragraphe à gauche*/
+    }
+
+    form {
+        width: 100%; /*prend toute la place du conteneur*/
+        max-width:350px; /*mais ne dépasse pas les 350px*/
+        text-align:left;
+        
+        label {
+            display:block; /*prend toute la ligne*/
+            font-family:$font-family;
+            font-size:0.9rem;
+            margin-bottom:5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea{
+            width:100%;
+            border:1px solid $black;
+            padding:10px;
+            font-family: $font-family;
+            outline:none; /*supprime le contour bleu par défaut*/
+            box-sizing:border-box;
+        }
+
+        .name-group {
+            display:flex; /*place nom et prénom côte à côte*/
+            gap:10px;
+            margin-bottom:20px;
+                
+            .input-sub{
+                flex:1; 
+                span {
+                    font-size:0.75rem;
+                    color:$black;
+                    margin-top:3px;
+                    display:block;
+                }
+            }
+        }
+    .form-groupe {
+        margin-bottom:20px;
+    }
+    .checkbox-group{
+        display:flex;
+        align-items:flex-start;
+        gap:10px;
+        margin-bottom:30px;
+
+        input {
+            margin-top:4px;
+            width:18px;
+            height:18px;
+        }
+
+        label {
+            font-size:0.8rem;
+            line-height:1.2;
+        }
+    }
+
+        button {
+        width:100%;
+        background-color: $yellow;
+        color:$white;
+        border:none;
+        padding:15px;
+        font-family:$font-family;
+        font-size:1rem;
+        }
+    }
+}

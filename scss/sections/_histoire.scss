@@ -1,0 +1,75 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.histoire {
+    padding: 60px 20px;
+    background-color: $white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    .image-container {
+        width:180px;
+        height:180px;
+        margin-bottom:40px;
+        border-radius:50%;
+        overflow:hidden;
+
+        img {
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+    }
+
+    .content-wrapper {
+        max-width: 330px;
+        width:100%;
+        text-align:left;
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+    
+    .quotes {
+        font-family:$font-main;
+        font-size:5rem;
+        font-weight:900;
+        color:$black;
+        line-height:0.7;
+        margin-bottom:0;
+        align-self:center;
+        display:inline-block;
+    }
+
+    h1 {
+        font-family:$font-main;
+        font-size:2.2rem;
+        font-weight:900;
+        color:$black;
+        margin-top:0;
+        margin-bottom:30px;
+        line-height:1.1;
+        text-align:center;
+        width:100%;
+    }
+
+    p {
+        font-family:$font-family;
+        font-size:0.9rem;
+        line-height:1.6;
+        color:$black;
+        font-weight:300;
+        margin-bottom: 25px;
+    }
+    
+    button {
+        background-color:$yellow;
+        color:$white;
+        border:none;
+        padding:12px 20px;
+        font-family:$font-family;
+        font-size:0.80rem;
+        align-self:flex-start;
+    }
+    }
+}

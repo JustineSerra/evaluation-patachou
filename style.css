@@ -1,21 +1,313 @@
+@charset "UTF-8";
 /*Fonts*/
 /*Couleurs*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  padding: 20px 0; /*espace avec le haut de la page*/
+  text-align: center; /*aligne tous les textes du header*/
+}
+header img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+nav ul li:first-child a {
+  color: #AB864C;
+}
+nav ul a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.evenement {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column; /*aligne verticalement*/
+  align-items: center;
+  text-align: center;
+}
+.evenement .separator {
+  width: 80%;
+  height: 1px; /*epaisseur de la ligne*/
+  background-color: #000000;
+  margin-bottom: 40px; /*espace sous la ligne avant le titre*/
+}
+.evenement h1 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 1.8rem;
+  font-weight: 900; /*titre en gras*/
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+.evenement p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  max-width: 350px;
+  text-align: left; /*aligne le paragraphe à gauche*/
+}
+.evenement form {
+  width: 100%; /*prend toute la place du conteneur*/
+  max-width: 350px; /*mais ne dépasse pas les 350px*/
+  text-align: left;
+}
+.evenement form label {
+  display: block; /*prend toute la ligne*/
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+.evenement form input[type=text],
+.evenement form input[type=email],
+.evenement form textarea {
+  width: 100%;
+  border: 1px solid #000000;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  outline: none; /*supprime le contour bleu par défaut*/
+  box-sizing: border-box;
+}
+.evenement form .name-group {
+  display: flex; /*place nom et prénom côte à côte*/
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.evenement form .name-group .input-sub {
+  flex: 1;
+}
+.evenement form .name-group .input-sub span {
+  font-size: 0.75rem;
+  color: #000000;
+  margin-top: 3px;
+  display: block;
+}
+.evenement form .form-groupe {
+  margin-bottom: 20px;
+}
+.evenement form .checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.evenement form .checkbox-group input {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+}
+.evenement form .checkbox-group label {
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+.evenement form button {
+  width: 100%;
+  background-color: #AB864C;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.histoire {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.histoire .image-container {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.histoire .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.histoire .content-wrapper {
+  max-width: 330px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.histoire .content-wrapper .quotes {
+  font-family: "Kaisei Decol", serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #000000;
+  line-height: 0.7;
+  margin-bottom: 0;
+  align-self: center;
+  display: inline-block;
+}
+.histoire .content-wrapper h1 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+}
+.histoire .content-wrapper p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #000000;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.histoire .content-wrapper button {
+  background-color: #AB864C;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  align-self: flex-start;
+}
+
+.presentation {
+  padding: 60px 20px; /*Reduction des marges sur les côtés*/
+  text-align: center;
+  background-color: #ffffff;
+}
+.presentation .quote-container {
+  margin-bottom: 40px;
+}
+.presentation .quote-container .quote {
+  font-family: "Kaisei Decol", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.presentation .quote-container .author {
+  font-family: "Kaisei Decol", serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.presentation .description {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 30px 0px;
+  width: 100%;
+  margin: 40px 0;
+}
+.presentation .description p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .promotion {
   background-image: url("images/haute-couture-2.jpg");
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 300px; /*taille parfaite pour le mobile*/
+  width: 100%; /*prend toute la largeur*/
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0; /*supprime les marges*/
 }
 .promotion h1 {
-  background-color: #ffffff;
-  padding: 20px;
-  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9); /*le 0.9 permet 10% de transparence*/
+  padding: 30px 25px;
+  font-size: 1.7rem;
   text-align: center;
-  width: 80%;
+  width: 260px; /*taille du rectangle blanc*/
+  line-height: 1.2;
+  font-family: "Kaisei Decol", serif;
   margin: 0;
+}
+
+.signature {
+  background-color: #AB864C;
+  padding: 60px 15px;
+  text-align: center;
+  color: #ffffff;
+}
+.signature h1 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.signature .irresistible, .signature .delicat, .signature .impetueux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.signature .irresistible img, .signature .delicat img, .signature .impetueux img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 25px; /*espace entre l'image et le sous-titre*/
+}
+.signature .irresistible h2, .signature .delicat h2, .signature .impetueux h2 {
+  font-family: "Kaisei Decol", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 0; /*ajoute un espace avec le paragraphe*/
+  margin-bottom: 50px; /*pareil mais en bas*/
+}
+.signature .irresistible p, .signature .delicat p, .signature .impetueux p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 340px;
+  margin: 0;
+}
+.signature button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 15px 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  width: auto;
+  max-width: 95%;
+  white-space: nowrap;
+  display: inline-block;
+  margin-top: 50px;
+}
+.signature button:hover {
+  background-color: #ffffff;
+  color: #AB864C;
 }
 
 /*# sourceMappingURL=style.css.map */

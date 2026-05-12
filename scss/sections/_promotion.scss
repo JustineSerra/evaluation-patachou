@@ -5,17 +5,21 @@
     background-image: url('images/haute-couture-2.jpg');
     background-size:cover;
     background-position:center;
-    height:300px;
+    height:300px; /*taille parfaite pour le mobile*/
+    width:100%;/*prend toute la largeur*/
     display:flex;
     justify-content:center;
     align-items:center;
+    margin:0; /*supprime les marges*/
 
     h1 {
-        background-color:$white;
-        padding:20px;
-        font-size:1.5rem;
+        background-color: rgba($white,0.9); /*le 0.9 permet 10% de transparence*/
+        padding:30px 25px;
+        font-size:1.7rem;
         text-align:center;
-        width:80%;
+        width:260px; /*taille du rectangle blanc*/
+        line-height:1.2; 
+        font-family:$font-main;
         margin:0;
     }
 }

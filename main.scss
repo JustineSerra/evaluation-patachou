@@ -1,3 +1,9 @@
+@use 'scss/base/base';
 @use 'scss/layout/header';
 @use 'scss/layout/footer';
-@use 'scss/sections/promotion'
+@use 'scss/sections/evenement';
+@use 'scss/sections/histoire';
+@use 'scss/sections/localisation';
+@use 'scss/sections/presentation';
+@use 'scss/sections/promotion';
+@use 'scss/sections/signature'

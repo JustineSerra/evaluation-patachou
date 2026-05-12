@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>Evaluation Patachou</title>
 </head>
@@ -25,11 +28,16 @@
 </section>
 
 <section class="presentation">
-	<p>“De toutes les passions, la seule vraiment respectable me parait être la gourmandise.”
-Guy de Maupassant
-	</p>
+	<div class="quote-container">
+		<blockquote class="quote">“De toutes les passions, la seule vraiment respectable me parait être la gourmandise.”
+	</blockquote>
+	<p class="author">Guy de Maupassant</p>
+	</div>
+
+	<div class="description">
 	<p>Nos délicieux gâteaux sont confectionnés avec soin de manière artisanale, en utilisant des ingrédients bruts issus de l’agriculture biologique, tout en respectant rigoureusement les saisons. Sans conservateurs, sans colorants ni d’arômes artificiels, nos créations mettent en avant la pureté des saveurs.
 	</p>
+	</div>
 </section>
 
 <section class="signature">
@@ -58,17 +66,56 @@ Guy de Maupassant
 </section>
 
 <section class="histoire">
+	<div class="image-container">
+		<img src="images/poche-douille_histoire-patachou.png" alt="Poche à douille">
+	</div>
+	
+	<div class="content-wrapper">
+	<span class="quotes">&ldquo;</span>
 	<h1>Patachou, toute une histoire...</h1>
 	<p>Une petite pâtisserie familiale, fondée il y a plusieurs décennies, se transmet de génération en génération, préservant l'artisanat traditionnel et les recettes secrètes. Connue pour ses créations uniques et raffinées, elle devient au fil du temps un lieu incontournable pour les amateurs de douceurs. Malgré les défis modernes, la passion et le savoir-faire continuent de faire vivre cette enseigne, où chaque pâtisserie raconte une histoire d'amour du métier
 	</p>
 	<button>Notre histoire</button>
+	</div>
 </section>
 
 <section class="evenement">
+	<div class="separator"></div>
 	<h1>Des gâteaux pour votre événement ?</h1>
 	<p> Pour vos événements exclusifs – anniversaire, séminaire d’entreprise ou réception privée – offrez à vos invités une sélection raffinée de pâtisseries, biscuits, mignardises et tartes, soigneusement élaborés pour sublimer chaque moment !
 	</p>
-	<form></form>
+
+	<form>
+		<label>Votre nom et prénom</label>
+		<div class="name-group">
+			<div class="input-sub">
+				<input type="text" id="firstname">
+				<span>Prénom</span>
+			</div>
+
+			<div class="input-sub">
+				<input type="text" id="lastname">
+				<span>Nom</span>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="email">Votre email</label>
+			<input type="email" id="email">
+		</div>
+
+		<div class="form-group">
+			<label for="message">Votre email</label>
+			<textarea id="message" rows="5"></textarea>
+		</div>
+
+		<div class="checkbox-group">
+			<input type="checkbox" id="policy">
+			<label for="policy">J'ai lu et j'accepte la politique de confidentialité</label>
+		</div>
+
+		<button type="submit">Envoyer</button>
+	</form>
 </section>
 
 <section class="localisation">

@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.signature {
+    background-color: $yellow;
+    padding: 60px 15px;
+    text-align:center;
+    color:$white;
+
+    h1 {
+        font-family:$font-main;
+        font-size:1.5rem;
+        font-weight:500;
+        margin-bottom:40px;
+    }
+
+    .irresistible, .delicat, .impetueux {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin-bottom:50px;
+
+
+        img {
+            width: 100%;
+            max-width:300px;
+            margin-bottom:25px; /*espace entre l'image et le sous-titre*/
+        }
+
+        h2 {
+            font-family: $font-main;
+            font-size:1.4rem;
+            font-weight:500;
+            margin-top:0; /*ajoute un espace avec le paragraphe*/
+            margin-bottom:50px; /*pareil mais en bas*/
+        }
+        p {
+            font-family:$font-family;
+            font-size:0.9rem;
+            font-weight:300;
+            line-height:1.6;
+            max-width:340px;
+            margin:0;
+        }
+    }
+    button {
+        background-color: transparent;
+        color:$white;
+        border:1px solid $white;
+        padding:15px 25px;
+        font-family:$font-family;
+        font-size:0.8rem;
+        width:auto;
+        max-width:95%;
+        white-space:nowrap;
+        display:inline-block;
+        margin-top:50px;
+
+
+        &:hover {
+            background-color:$white;
+            color:$yellow;
+        }
+    }
+}
