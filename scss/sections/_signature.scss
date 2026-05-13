@@ -40,7 +40,17 @@
             font-weight:300;
             line-height:1.6;
             max-width:340px;
+            text-align:center;
             margin:0;
+
+            @include tablet {
+                max-width:600px;
+                font-size:1rem;
+            }
+
+            @include desktop {
+                max-width:800px;
+            }
         }
     }
     button {

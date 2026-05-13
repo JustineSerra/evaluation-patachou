@@ -25,20 +25,16 @@
     .content-wrapper {
         max-width: 330px;
         width:100%;
-        text-align:left;
+        margin:0 auto;
         display:flex;
         flex-direction:column;
-        align-items:flex-start;
+        align-items:center;
     
-    .quotes {
-        font-family:$font-main;
-        font-size:5rem;
-        font-weight:900;
-        color:$black;
-        line-height:0.7;
-        margin-bottom:0;
-        align-self:center;
-        display:inline-block;
+    .quote-svg {
+        width:40px;
+        height:auto;
+        margin-bottom:20px;
+        display:block;
     }
 
     h1 {
@@ -60,6 +56,7 @@
         color:$black;
         font-weight:300;
         margin-bottom: 25px;
+        text-align:left;
     }
     
     button {
