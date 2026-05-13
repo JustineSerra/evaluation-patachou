@@ -17,6 +17,13 @@
         margin-bottom:30px; /*espace entre le titre et l'adresse*/
         max-width:350px;
         padding:0 20px;
+
+        @include tablet {
+            max-width:none;
+            width:100%;
+            padding: 0 10%;
+            font-size:2rem;
+        }
     }
 
     p {
