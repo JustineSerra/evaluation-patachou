@@ -158,11 +158,38 @@ nav ul a {
   align-items: center;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .evenement {
+    align-items: flex-start;
+    text-align: left;
+    padding: 80px 10%; /*ajoute de l'espace sur les côtés*/
+  }
+}
+@media (min-width: 1024px) {
+  .evenement {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 100px 10%;
+  }
+}
 .evenement .separator {
   width: 80%;
   height: 1px; /*epaisseur de la ligne*/
   background-color: #000000;
   margin-bottom: 40px; /*espace sous la ligne avant le titre*/
+}
+@media (min-width: 768px) {
+  .evenement .separator {
+    width: 100%; /*prend toute la largeur*/
+  }
+}
+@media (min-width: 1024px) {
+  .evenement .separator {
+    flex: 0 0 100%;
+    margin-bottom: 60px;
+  }
 }
 .evenement h1 {
   font-family: "Kaisei Decol", serif;
@@ -170,6 +197,25 @@ nav ul a {
   font-weight: 900; /*titre en gras*/
   margin-bottom: 20px;
   max-width: 300px;
+}
+@media (min-width: 768px) {
+  .evenement h1 {
+    max-width: none;
+    width: 100%;
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .evenement h1 {
+    display: block !important;
+    flex: 0 0 45% !important;
+    max-width: 600px !important;
+    line-height: 1.1;
+    order: 1;
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    text-align: left;
+  }
 }
 .evenement p {
   font-family: "Poppins", sans-serif;
@@ -179,10 +225,36 @@ nav ul a {
   max-width: 350px;
   text-align: left; /*aligne le paragraphe à gauche*/
 }
+@media (min-width: 768px) {
+  .evenement p {
+    width: 100%; /*prend toute la largeur*/
+    max-width: none;
+  }
+}
+@media (min-width: 1024px) {
+  .evenement p {
+    width: 45%;
+    order: 3;
+    margin-top: -180px;
+  }
+}
 .evenement form {
   width: 100%; /*prend toute la place du conteneur*/
   max-width: 350px; /*mais ne dépasse pas les 350px*/
   text-align: left;
+}
+@media (min-width: 768px) {
+  .evenement form {
+    width: 100%; /*prend toute la largeur*/
+    max-width: none;
+  }
+}
+@media (min-width: 1024px) {
+  .evenement form {
+    width: 50%;
+    max-width: 600px;
+    order: 2;
+  }
 }
 .evenement form label {
   display: block; /*prend toute la ligne*/
@@ -208,20 +280,20 @@ nav ul a {
 .evenement form .name-group .input-sub {
   flex: 1;
 }
-.evenement form .name-group .input-sub span {
-  font-size: 0.75rem;
-  color: #000000;
-  margin-top: 3px;
-  display: block;
-}
 .evenement form .form-groupe {
   margin-bottom: 20px;
 }
 .evenement form .checkbox-group {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 20px;
+  margin-bottom: 30px; /*met un espace avec le bouton du dessous*/
+  margin-top: 10px; /*met un espace avec le bloc du dessus*/
+}
+@media (min-width: 768px) {
+  .evenement form .checkbox-group {
+    margin-top: 10px;
+  }
 }
 .evenement form .checkbox-group input {
   margin-top: 4px;

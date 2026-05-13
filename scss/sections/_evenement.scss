@@ -8,11 +8,34 @@
     align-items:center;
     text-align:center;
 
+    @include tablet {
+        align-items:flex-start;
+        text-align:left;
+        padding:80px 10%; /*ajoute de l'espace sur les côtés*/
+    }
+
+    @include desktop {
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:flex-start;
+        justify-content:space-between;
+        padding:100px 10%;
+    }
+
     .separator {
         width:80%;
         height:1px; /*epaisseur de la ligne*/
         background-color:$black;
         margin-bottom:40px; /*espace sous la ligne avant le titre*/
+
+        @include tablet {
+            width:100%; /*prend toute la largeur*/
+        }
+
+        @include desktop {
+            flex: 0 0 100%;
+            margin-bottom:60px;
+        }
     }
 
     h1 {
@@ -21,6 +44,23 @@
         font-weight:900; /*titre en gras*/
         margin-bottom:20px;
         max-width: 300px; 
+
+        @include tablet {
+            max-width: none;
+            width:100%;
+            font-size:3rem;
+        }
+
+        @include desktop {
+            display:block !important;
+            flex: 0 0 45% !important;
+            max-width: 600px !important;
+            line-height:1.1;
+            order:1;
+            margin-bottom:20px;
+            font-size:3.5rem;
+            text-align:left;
+        }
     }
     
     p {
@@ -30,12 +70,35 @@
         margin-bottom:40px;
         max-width:350px;
         text-align:left; /*aligne le paragraphe à gauche*/
+
+        @include tablet {
+        width:100%; /*prend toute la largeur*/
+        max-width:none;
+        }
+
+        @include desktop {
+        width:45%;
+        order:3;
+        margin-top:-180px;
+        }
     }
 
     form {
         width: 100%; /*prend toute la place du conteneur*/
         max-width:350px; /*mais ne dépasse pas les 350px*/
         text-align:left;
+
+        @include tablet {
+        width:100%; /*prend toute la largeur*/
+        max-width:none;
+        }
+
+        @include desktop {
+            width:50%;
+            max-width:600px;
+            order:2;
+        }
+
         
         label {
             display:block; /*prend toute la ligne*/
@@ -62,12 +125,6 @@
                 
             .input-sub{
                 flex:1; 
-                span {
-                    font-size:0.75rem;
-                    color:$black;
-                    margin-top:3px;
-                    display:block;
-                }
             }
         }
     .form-groupe {
@@ -76,8 +133,13 @@
     .checkbox-group{
         display:flex;
         align-items:flex-start;
-        gap:10px;
-        margin-bottom:30px;
+        gap:20px;
+        margin-bottom:30px; /*met un espace avec le bouton du dessous*/
+        margin-top:10px; /*met un espace avec le bloc du dessus*/
+
+        @include tablet {
+            margin-top:10px;
+        }
 
         input {
             margin-top:4px;
