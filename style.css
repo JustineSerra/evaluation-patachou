@@ -423,16 +423,44 @@ nav ul a {
   font-weight: 500;
   margin-bottom: 40px;
 }
+@media (min-width: 1024px) {
+  .signature h1 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+}
+.signature .container-gateaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .signature .container-gateaux {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+}
 .signature .irresistible, .signature .delicat, .signature .impetueux {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1024px) {
+  .signature .irresistible, .signature .delicat, .signature .impetueux {
+    flex: 1;
+    margin-bottom: 0;
+  }
 }
 .signature .irresistible img, .signature .delicat img, .signature .impetueux img {
   width: 100%;
   max-width: 300px;
   margin-bottom: 25px; /*espace entre l'image et le sous-titre*/
+  object-fit: cover;
 }
 .signature .irresistible h2, .signature .delicat h2, .signature .impetueux h2 {
   font-family: "Kaisei Decol", serif;
@@ -458,7 +486,7 @@ nav ul a {
 }
 @media (min-width: 1024px) {
   .signature .irresistible p, .signature .delicat p, .signature .impetueux p {
-    max-width: 800px;
+    max-width: 100%;
   }
 }
 .signature button {
@@ -471,8 +499,15 @@ nav ul a {
   width: auto;
   max-width: 95%;
   white-space: nowrap;
-  display: inline-block;
   margin-top: 50px;
+  display: inline-block; /*reste au centre sur toutes les résolutions*/
+}
+@media (min-width: 1024px) {
+  .signature button {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    padding: 20px 40px;
+  }
 }
 .signature button:hover {
   background-color: #ffffff;

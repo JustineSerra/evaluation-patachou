@@ -12,19 +12,45 @@
         font-size:1.5rem;
         font-weight:500;
         margin-bottom:40px;
+
+        @include desktop {
+            font-size:2.5rem;
+            margin-bottom:60px;
+        }
+    }
+
+    .container-gateaux {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        @include desktop {
+            flex-direction:row;
+            justify-content: center;
+            gap:40px;
+            max-width: 1200px;
+            margin:0 auto;
+            align-items:flex-start;
+        }
     }
 
     .irresistible, .delicat, .impetueux {
         display:flex;
         flex-direction:column;
         align-items:center;
-        margin-bottom:50px;
+        margin-bottom:30px;
+
+        @include desktop {
+            flex:1;
+            margin-bottom:0;
+        }
 
 
         img {
             width: 100%;
             max-width:300px;
             margin-bottom:25px; /*espace entre l'image et le sous-titre*/
+            object-fit:cover;
         }
 
         h2 {
@@ -49,7 +75,7 @@
             }
 
             @include desktop {
-                max-width:800px;
+                max-width:100%;
             }
         }
     }
@@ -63,8 +89,14 @@
         width:auto;
         max-width:95%;
         white-space:nowrap;
-        display:inline-block;
         margin-top:50px;
+        display:inline-block; /*reste au centre sur toutes les résolutions*/
+
+        @include desktop {
+            margin-top:60px;
+            font-size:0.9rem;
+            padding:20px 40px;
+        }
 
 
         &:hover {
