@@ -249,12 +249,36 @@ nav ul a {
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 1024px) {
+  .histoire {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+}
 .histoire .image-container {
   width: 180px;
   height: 180px;
   margin-bottom: 40px;
   border-radius: 50%;
   overflow: hidden;
+}
+@media (min-width: 768px) {
+  .histoire .image-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (min-width: 1024px) {
+  .histoire .image-container {
+    width: 450px;
+    height: 450px;
+    min-height: 450px;
+    max-height: 450px;
+    min-width: 450px;
+    max-width: 450px;
+  }
 }
 .histoire .image-container img {
   width: 100%;
@@ -264,16 +288,30 @@ nav ul a {
 .histoire .content-wrapper {
   max-width: 330px;
   width: 100%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .histoire .content-wrapper {
+    max-width: 600px;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
+  .histoire .content-wrapper {
+    max-width: 550px;
+  }
+}
 .histoire .content-wrapper .quote-svg {
   width: 40px;
-  height: auto;
   margin-bottom: 20px;
-  display: block;
+}
+@media (min-width: 1024px) {
+  .histoire .content-wrapper .quote-svg {
+    align-self: flex-start;
+  }
 }
 .histoire .content-wrapper h1 {
   font-family: "Kaisei Decol", serif;
@@ -286,6 +324,18 @@ nav ul a {
   text-align: center;
   width: 100%;
 }
+@media (min-width: 768px) {
+  .histoire .content-wrapper h1 {
+    text-align: left;
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .histoire .content-wrapper h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+}
 .histoire .content-wrapper p {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
@@ -295,6 +345,17 @@ nav ul a {
   margin-bottom: 25px;
   text-align: left;
 }
+@media (min-width: 1024px) {
+  .histoire .content-wrapper p {
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .histoire .content-wrapper p {
+    text-align: left;
+  }
+}
 .histoire .content-wrapper button {
   background-color: #AB864C;
   color: #ffffff;
@@ -303,6 +364,11 @@ nav ul a {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   align-self: flex-start;
+}
+@media (min-width: 1024px) {
+  .histoire .content-wrapper button {
+    align-self: flex-start;
+  }
 }
 
 .localisation {
